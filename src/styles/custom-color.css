@@ -1,0 +1,43 @@
+.bg-dawn-light {
+    background-color: #212631;
+}
+
+.bg-dawn-light:focus {
+    background-color: #212631;
+}
+
+.bg-dawn {
+    background-color: #1d222b;
+}
+
+.bg-dawn:focus {
+    background-color: #1d222b;
+}
+
+.border-gray {
+    border-color: #373b45;
+}
+
+.border-left-gray-light {
+    border-left: 1px solid #333948FF;
+}
+
+.border-right-gray-light {
+    border-right: 1px solid #333948FF;
+}
+
+.border-top-gray-light {
+    border-top: 1px solid #333948FF;
+}
+
+.border-bottom-gray-light {
+    border-bottom: 1px solid #333948FF;
+}
+
+.selectable:hover {
+    background-color: #333948FF !important;
+}
+
+.gray-placeholder::placeholder {
+    color: #a6a8ad;
+}
