@@ -8,8 +8,9 @@ const HomePage: React.FC = () => {
     const navigate = useNavigate()
 
     return (
-        <div className="homepage-container d-flex align-items-center justify-content-center min-vh-100 text-white">
-            <CContainer className="text-center">
+        <div className="homepage-container d-flex flex-column justify-content-between min-vh-100 text-white">
+            {/* 메인 콘텐츠 영역 */}
+            <CContainer className="text-center my-auto">
                 <h1 className="display-3 fw-bold mb-4">Object Storage</h1>
                 <p className="fs-5 mb-4 text-light">
                     빠르고 안전한 파일 저장 서비스를 경험해보세요. <br />
@@ -24,6 +25,13 @@ const HomePage: React.FC = () => {
                     </CButton>
                 </div>
             </CContainer>
+
+            {/* 맨 아래 가운데 정렬된 워터마크 */}
+            <footer className="text-center pb-3">
+                <small className="text-secondary">
+                    단국대학교 사이버보안학과 32201062 김준형
+                </small>
+            </footer>
         </div>
     )
 }
