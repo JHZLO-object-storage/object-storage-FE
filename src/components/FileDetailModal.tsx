@@ -50,8 +50,10 @@ const FileDetailModal: React.FC<FileDetailModalProps> = ({
                                                          }) => {
     const closeModal = () => {
         setVisible(false)
-        window.location.href = 'http://localhost:5173/bucket/my-storage'
+        const FRONT_BASE_URL = import.meta.env.VITE_FRONT_BASE_URL
+        window.location.href = `${FRONT_BASE_URL}/bucket/my-storage`
     }
+
 
     return (
         <CModal visible={visible} onClose={closeModal}>
