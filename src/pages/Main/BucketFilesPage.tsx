@@ -23,6 +23,8 @@ const BucketFilesPage: React.FC = () => {
 
     const [uploadVisible, setUploadVisible] = useState(false)
 
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
+
     const fetchFiles = async () => {
         try {
             const data = await getFileList()
@@ -72,13 +74,13 @@ const BucketFilesPage: React.FC = () => {
         if (detail.permission === 'SECRET') {
             setDownloadTarget(type)
         } else {
-            const url = `http://localhost:8080/api/v1/download/${detail.id}?disposition=${type}`
+            const url = `${API_BASE_URL}/download/${detail.id}?disposition=${type}`
             window.open(url, '_blank')
         }
     }
 
     const triggerDownload = () => {
-        const url = `http://localhost:8080/api/v1/download/${detail.id}?disposition=${downloadTarget}&password=${downloadPassword}`
+        const url = `${API_BASE_URL}/download/${detail.id}?disposition=${downloadTarget}&password=${downloadPassword}`
         window.open(url, '_blank')
         setDownloadTarget(null)
         setDownloadPassword('')
